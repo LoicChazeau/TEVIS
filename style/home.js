@@ -1,10 +1,7 @@
 module.exports = {
 
-    "centerRowAligment":{
-        flex: 1,
+    "orange":{
         backgroundColor:"#ffffff",
-        flexDirection: 'row',
-        alignItems:"center"
     },
     "centerColumnAligment":{
         flex: 1,
