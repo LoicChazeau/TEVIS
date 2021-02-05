@@ -3,15 +3,16 @@ import {View, Text, StyleSheet, Image} from 'react-native'
 
 export default function Whathot() {
   return(
-    <View style={styles.container}>
-
+    <View>
+        <Text style={styles.text}>What's HOT</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
+  text: {
+    color: '#FFFFFF',
+    textAlign: "center",
+    fontWeight: "bold",
   }
 });

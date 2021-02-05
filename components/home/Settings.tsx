@@ -1,17 +1,27 @@
 import React from 'react'
-import {View, Text, StyleSheet, Image} from 'react-native'
+import { View, Text, StyleSheet, Image } from 'react-native'
 
 export default function Settings() {
-  return(
-    <View style={styles.container}>
-
+  return (
+    <View>
+        <View style={styles.button}>
+          <Text style={styles.text}>Settings</Text>
+        </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  }
+  button: {
+    height: 130,
+    width: 110,
+    backgroundColor: '#EAC652',
+    justifyContent: 'center',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+  },
+  text: {
+    color: '#FFFFFF',
+    textAlign: "center",
+  },
 });
