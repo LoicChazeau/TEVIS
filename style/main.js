@@ -1,5 +1,4 @@
 module.exports = {
-
     "bg":{
         backgroundColor:"#1A1C1E",
     },

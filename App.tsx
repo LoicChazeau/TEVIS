@@ -1,13 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { Text, View } from 'react-native';
-import styles from './style/home';
+import React, { FunctionComponent } from "react"
+import { ScrollView, SafeAreaView, StyleSheet, View } from "react-native"
 
-export default function App() {
+import Home from "./view/Home"
+
+const App: FunctionComponent = () => {
   return (
-    <View style={styles.centerRowAligment, styles.test}>
-      <Text>Opeorking your app!!!!!!!!!!!!!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+        <View style={style.bg}>
+          <Home />
+        </View>
+  )
 }
+
+const style = StyleSheet.create({
+  bg: {
+    flex: 1,
+    backgroundColor: '#1A1C1E',
+  },
+})
+
+export default App
