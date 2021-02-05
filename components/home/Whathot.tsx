@@ -1,17 +1,22 @@
 import React from 'react'
-import {View, Text, StyleSheet, Image} from 'react-native'
+import { View, Text, StyleSheet, Image } from 'react-native'
 
 export default function Whathot() {
-  return(
-    <View style={styles.container}>
-
+  return (
+    <View>
+      <View style={{ flexDirection: 'row', justifyContent: 'center'}}>
+        <Text style={styles.text}>What's</Text>
+        <Text style={styles.text}> HOT</Text>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
+  text: {
+    color: '#FFFFFF',
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 39,
   }
 });

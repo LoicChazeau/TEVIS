@@ -4,14 +4,16 @@ import {View, Text, StyleSheet, Image} from 'react-native'
 export default function History() {
   return(
     <View>
-      <Text>test history</Text>
+        <Text style={styles.text}>History</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
+  text: {
+    color: '#FFFFFF',
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 39,
   }
 });
