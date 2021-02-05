@@ -39,8 +39,10 @@ export default function Home({ navigation }) {
 
       <View style={[{ flex: 1 }]}></View>
 
-      <View style={styles.justify}>
+      <View style={[{ flex: 2, alignItems: 'center' }]}>
+      <View style={[{ flex: 1, backgroundColor: "#EAC652", justifyContent: "center", borderTopLeftRadius: 20, borderTopRightRadius: 20, width: "30%", alignItems: 'center'}]}>
         <Settings />
+      </View>
       </View>
     </View>
   );
@@ -56,7 +58,6 @@ const styles = StyleSheet.create({
     marginTop: "15%",
   },
   justify: {
-    flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
     marginTop: '10%',
