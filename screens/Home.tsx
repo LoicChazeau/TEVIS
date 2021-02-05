@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { StackScreenProps } from '@react-navigation/stack';
 
 import History from "../components/home/History";
 import Logo from "../components/home/Logo";
@@ -9,22 +10,35 @@ import Settings from "../components/home/Settings";
 import Signin from "../components/home/Signin";
 import Whathot from "../components/home/Whathot";
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={[{flex: 1}]}></View>
-      <View style={[{flex: 2, backgroundColor: "#F96E4F", justifyContent: "center"}]}>
-        <Whathot />
+      <View style={[{ flex: 1 }]}></View>
+
+      <View style={[{ flex: 2, backgroundColor: "#F96E4F", justifyContent: "center" }]}>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={[{flex: 1, justifyContent: 'center'}]}>
+          <Whathot />
+        </TouchableOpacity>
       </View>
-      <View style={[{flex: 1}]}></View>
-      <View style={[{flex: 2, backgroundColor: "#EAC652", justifyContent: "center"}]}>
-        <Newcomment />
+
+      <View style={[{ flex: 1 }]}></View>
+
+      <View style={[{ flex: 2, backgroundColor: "#EAC652", justifyContent: "center" }]}>
+        <TouchableOpacity>
+          <Newcomment />
+        </TouchableOpacity>
       </View>
-      <View style={[{flex: 1}]}></View>
-      <View style={[{flex: 2, backgroundColor: "#EAC652", justifyContent: "center"}]}>
-        <History />
+
+      <View style={[{ flex: 1 }]}></View>
+
+      <View style={[{ flex: 2, backgroundColor: "#EAC652", justifyContent: "center" }]}>
+        <TouchableOpacity>
+          <History />
+        </TouchableOpacity>
       </View>
-      <View style={[{flex: 1}]}></View>
+
+      <View style={[{ flex: 1 }]}></View>
+
       <View style={styles.justify}>
         <Settings />
       </View>
