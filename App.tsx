@@ -6,12 +6,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from "./screens/Home";
 import Login from "./screens/Login";
+import Settings from "./screens/Settings";
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Settings" component={Settings} />
         <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
