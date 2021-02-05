@@ -6,13 +6,13 @@ export default function History() {
     <View style={{flexDirection: 'row'}}>
 
       <View style={{ flex: 1 }}>
-        <Text style={styles.text}>History</Text>
+        <Text style={styles.text} numberOfLines={1} adjustsFontSizeToFit>History</Text>
       </View>
 
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Image
           source={require("../../assets/clock.png")}
-          style={{ width: '30%', height: '30%', flex: 1 }}
+          style={{ width: '100%', height: '100%', resizeMode: 'contain' }}
         />
       </View>
 

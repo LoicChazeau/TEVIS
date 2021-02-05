@@ -5,7 +5,7 @@ export default function Whathot() {
   return (
     <View>
       <View style={{ flexDirection: 'row', justifyContent: 'center'}}>
-        <Text style={styles.text}>What's</Text>
+        <Text style={styles.text} numberOfLines={1} adjustsFontSizeToFit>What's </Text>
         <Text style={styles.text}> HOT</Text>
       </View>
     </View>

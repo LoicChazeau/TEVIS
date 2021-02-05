@@ -4,7 +4,7 @@ import {View, Text, StyleSheet, Image} from 'react-native'
 export default function Newcomment() {
   return(
     <View>
-        <Text style={styles.text}>New comment</Text>
+        <Text style={styles.text} numberOfLines={1} adjustsFontSizeToFit>New comment</Text>
     </View>
   );
 }

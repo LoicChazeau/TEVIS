@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity, Dimensions } from "react-native";
 import { StackScreenProps } from '@react-navigation/stack';
 
 import History from "../components/home/History";
@@ -10,13 +10,15 @@ import Settings from "../components/home/Settings";
 import Signin from "../components/home/Signin";
 import Whathot from "../components/home/Whathot";
 
+var { width } = Dimensions.get('window');
+
 export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={[{ flex: 1 }]}></View>
 
       <View style={[{ flex: 2, backgroundColor: "#F96E4F", justifyContent: "center" }]}>
-        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={[{flex: 1, justifyContent: 'center'}]}>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={[{ flex: 1, justifyContent: 'center' }]}>
           <Whathot />
         </TouchableOpacity>
       </View>
@@ -39,10 +41,10 @@ export default function Home({ navigation }) {
 
       <View style={[{ flex: 1 }]}></View>
 
-      <View style={[{ flex: 2, alignItems: 'center' }]}>
-      <View style={[{ flex: 1, backgroundColor: "#EAC652", justifyContent: "center", borderTopLeftRadius: 20, borderTopRightRadius: 20, width: "30%", alignItems: 'center'}]}>
-        <Settings />
-      </View>
+      <View style={[{ flex: 1.8, alignItems: 'center' }]}>
+        <View style={[{ flex: 1, backgroundColor: "#EAC652", borderTopLeftRadius: 20, borderTopRightRadius: 20, width: "27%"}]}>
+          <Settings />
+        </View>
       </View>
     </View>
   );
@@ -61,5 +63,11 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
     marginTop: '10%',
+  },
+  text: {
+    color: '#FFFFFF',
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 14,
   }
 });
