@@ -1,21 +1,22 @@
-import React, { FunctionComponent } from "react"
-import { ScrollView, SafeAreaView, StyleSheet, View } from "react-native"
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { Text, View, StyleSheet } from "react-native";
 
-import Home from "./view/Home"
+import Home from "./screens/Home";
 
-const App: FunctionComponent = () => {
+export default function App() {
   return (
-        <View style={style.bg}>
-          <Home />
-        </View>
-  )
+    <View style={styles.container}>
+      <Text>app.tsx</Text>
+      <Home />
+      <StatusBar style="auto" />
+    </View>
+  );
 }
 
-const style = StyleSheet.create({
-  bg: {
+const styles = StyleSheet.create({
+  container: {
     flex: 1,
-    backgroundColor: '#1A1C1E',
-  },
-})
-
-export default App
+    backgroundColor: '#ffffff',
+  }
+});
