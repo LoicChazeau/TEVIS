@@ -1,12 +1,16 @@
 import React from 'react'
-import {View, Text, StyleSheet, Image} from 'react-native'
+import {View, Text, StyleSheet, Image } from 'react-native'
+import { SearchBar } from 'react-native-elements';
+
 
 export default function Searchbar() {
-  return(
-    <View style={styles.container}>
-
-    </View>
-  );
+    return (
+      <SearchBar
+        placeholder="Type Here..."
+        onChangeText={this.updateSearch}
+        value={search}
+      />
+    );
 }
 
 const styles = StyleSheet.create({

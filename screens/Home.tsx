@@ -15,7 +15,18 @@ var { width } = Dimensions.get('window');
 export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={[{ flex: 1 }]}></View>
+
+      <View style={[{ flex: 0.2 }]}></View>
+
+
+      <View style={{ flex: 1.75 }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+          <Logo />
+          <View style={{ justifyContent: 'center'}}>
+            <Signin />
+          </View>
+        </View>
+      </View>
 
       <View style={[{ flex: 2, backgroundColor: "#F96E4F", justifyContent: "center" }]}>
         <TouchableOpacity onPress={() => navigation.navigate('Login')} style={[{ flex: 1 }]}>
@@ -23,7 +34,7 @@ export default function Home({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      <View style={[{ flex: 1 }]}></View>
+      <View style={[{ flex: 0.9 }]}></View>
 
       <View style={[{ flex: 2, backgroundColor: "#EAC652", justifyContent: "center" }]}>
         <TouchableOpacity style={{ flex: 1 }}>
@@ -31,7 +42,7 @@ export default function Home({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      <View style={[{ flex: 1 }]}></View>
+      <View style={[{ flex: 0.9 }]}></View>
 
       <View style={[{ flex: 2, backgroundColor: "#EAC652", justifyContent: "center" }]}>
         <TouchableOpacity style={{ flex: 1 }}>
@@ -39,7 +50,7 @@ export default function Home({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      <View style={[{ flex: 1 }]}></View>
+      <View style={[{ flex: 0.75 }]}></View>
 
       <View style={{ flex: 1.8, alignItems: 'center' }}>
         <View style={[{ backgroundColor: "#EAC652", flex: 1, borderTopLeftRadius: 20, borderTopRightRadius: 20, width: "27%" }]}>
