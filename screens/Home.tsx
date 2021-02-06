@@ -20,9 +20,17 @@ export default function Home({ navigation }) {
 
 
       <View style={{ flex: 1.75 }}>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+
+          <View style={{ paddingLeft: 10}}>
           <Logo />
-          <View style={{ justifyContent: 'center'}}>
+          </View>
+
+          <View>
+          <Searchbar />
+          </View>
+
+          <View style={{ justifyContent: 'center', paddingRight: 10}}>
             <Signin />
           </View>
         </View>
