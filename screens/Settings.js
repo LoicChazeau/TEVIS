@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, Image } from "react-native";
 export default function History() {
   return (
     <View>
+      <Text>blablabla</Text>
     </View>
   );
 }

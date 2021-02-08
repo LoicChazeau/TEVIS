@@ -11,6 +11,7 @@ class Login extends React.Component {
 			if (user) {
 				this.props.getUser(user.uid)
 				if (this.props.user != null) {
+					console.log(user.uid)
 					this.props.navigation.navigate('Profile')
 				}
 			}
@@ -93,7 +94,7 @@ const mapStateToProps = state => {
 	}
 }
 
-export default connect(
+export default Login = connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(Login)

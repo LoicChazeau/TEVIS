@@ -1,13 +1,20 @@
 import firebase from 'firebase'
+import {
+	AUTH_DOMAIN,
+	DATABASE_URL,
+	MESSAGE_SENDER_ID,
+	APP_ID
+} from 'react-native-dotenv'
 import 'firebase/firestore'
 
 const firebaseConfig = {
-	apiKey: "AIzaSyCip9Jb2wSj-tBDpPpsR-TzEvzOlnextAY",
-	authDomain: "tevis-1829e.firebaseapp.com",
-	projectId: "tevis-1829e",
-	storageBucket: "tevis-1829e.appspot.com",
-	messagingSenderId: "414927400212",
-	appId: "1:414927400212:web:30494cbf8a5f478e70a601"
+	apiKey: 'AIzaSyCip9Jb2wSj-tBDpPpsR-TzEvzOlnextAY',
+	authDomain: AUTH_DOMAIN,
+	databaseURL: DATABASE_URL,
+	projectId: 'tevis-1829e',
+	storageBucket: 'tevis-1829e.appspot.com',
+	messagingSenderId: MESSAGE_SENDER_ID,
+	appId: APP_ID
 }
 
 // Initialize Firebase
