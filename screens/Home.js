@@ -12,7 +12,7 @@ import Whathot from "../components/home/Whathot";
 export default function Home({ navigation }) {
 	return (
 		<View style={styles.container}>
-			<View style={{ flex: 0.2 }}></View>
+			<View style={{ flex: 0.4 }}></View>
 			<View style={{ flex: 1.75 }}>
 				<View style={styles.header}>
 					<View style={{ paddingLeft: 10 }}>
@@ -74,7 +74,8 @@ const styles = StyleSheet.create({
 	whathot: {
 		flex: 2,
 		backgroundColor: "#F96E4F",
-		justifyContent: "center"
+		justifyContent: "center",
+		marginTop: 20,
 	},
 	newcomment: {
 		flex: 2,
