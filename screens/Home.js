@@ -1,12 +1,11 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
 
 import History from "../components/home/History";
 import Logo from "../components/home/Logo";
 import Newcomment from "../components/home/Newcomment";
 import Searchbar from "../components/home/Searchbar";
 import Settings from "../components/home/Settings";
-import Signin from "../components/home/Signin";
 import Whathot from "../components/home/Whathot";
 
 export default function Home({ navigation }) {
@@ -20,9 +19,13 @@ export default function Home({ navigation }) {
 					</View>
 					<Searchbar />
 					<View style={styles.signin}>
-						<TouchableOpacity onPress={() => navigation.navigate("Login")} style={{ flex: 1 }} >
-							<Signin />
-						</TouchableOpacity>
+						<View style={styles.square}>
+							<TouchableOpacity onPress={() => navigation.navigate("Login")} style={{ flex: 1 }} >
+								<View style={{ alignItems: 'center' }}>
+									<Text style={styles.text}>Sign In</Text>
+								</View>
+							</TouchableOpacity>
+						</View>
 					</View>
 				</View>
 			</View>
@@ -93,5 +96,20 @@ const styles = StyleSheet.create({
 		borderTopLeftRadius: 20,
 		borderTopRightRadius: 20,
 		width: "27%"
+	},
+	square: {
+		width: 90,
+		height: 40,
+		borderRadius: 10,
+		borderColor: '#2D9BF0',
+		borderStyle: 'solid',
+		borderWidth: 3,
+		backgroundColor: "#313335",
+		justifyContent: 'center',
+		paddingBottom: 4,
+	},
+	text: {
+		fontSize: 22,
+		color: "#2D9BF0",
 	}
 });
