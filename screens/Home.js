@@ -20,7 +20,7 @@ export default function Home({ navigation }) {
 					</View>
 					<Searchbar />
 					<View style={styles.signin}>
-						<TouchableOpacity style={{ flex: 1 }}>
+						<TouchableOpacity onPress={() => navigation.navigate("Login")} style={{ flex: 1 }} >
 							<Signin />
 						</TouchableOpacity>
 					</View>
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
 	},
 	signin: {
 		justifyContent: "center",
+		alignItems: 'center',
 		paddingRight: 10
 	},
 	whathot: {
