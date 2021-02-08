@@ -34,7 +34,6 @@ class Login extends React.Component {
 
 				<TextInput
 					style={styles.input}
-					value={this.props.user.email}
 					onChangeText={email => this.props.updateEmail(email)}
 					placeholder='Email'
 					placeholderTextColor='#D1D1D1'
@@ -42,7 +41,6 @@ class Login extends React.Component {
 				/>
 				<TextInput
 					style={styles.input}
-					value={this.props.user.password}
 					onChangeText={password => this.props.updatePassword(password)}
 					placeholder='Password'
 					placeholderTextColor='#D1D1D1'
