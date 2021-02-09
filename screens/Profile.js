@@ -26,13 +26,13 @@ class Profile extends React.Component {
 
 				<View style={styles.backinput}>
 					<TouchableOpacity style={styles.center}>
-						<Text style={ styles.input}>Email: {this.props.user.email}</Text>
+						<Text style={styles.input}>Email: {this.props.user.email}</Text>
 					</TouchableOpacity>
 				</View>
 
 				<View style={styles.backinput}>
 					<TouchableOpacity style={styles.center}>
-					<Text style={ styles.input}>Password: •••••••••••••</Text>
+						<Text style={styles.input}>Password: •••••••••••••</Text>
 					</TouchableOpacity>
 				</View>
 
@@ -42,10 +42,10 @@ class Profile extends React.Component {
 					</TouchableOpacity>
 				</View>
 
-				<View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+				<View style={styles.row}>
 					<Image
 						source={require("../assets/avatar.png")}
-						style={{ width: "80%", height: "80%", resizeMode: 'contain' }}
+						style={styles.avatar}
 					/>
 					<View style={styles.changebtn}>
 						<Text style={styles.change}>Change</Text>
@@ -54,7 +54,7 @@ class Profile extends React.Component {
 
 				<View style={styles.historybtn}>
 					<TouchableOpacity>
-						<View style={{ padding: 10, justifyContent: 'center', alignItems: 'center' }}>
+						<View style={styles.text2}>
 							<Text style={styles.history}>Like history</Text>
 							<Text style={styles.history}>Comment history</Text>
 						</View>
@@ -63,7 +63,7 @@ class Profile extends React.Component {
 
 				<Image
 					source={require("../assets/back.png")}
-					style={{ width: "15%", height: "15%", resizeMode: 'contain', flex: 0.6 }}
+					style={styles.back}
 				/>
 
 			</View>
@@ -138,6 +138,28 @@ const styles = StyleSheet.create({
 		height: '7%',
 		marginBottom: 20,
 		justifyContent: 'center',
+	},
+	back: {
+		width: "15%",
+		height: "15%",
+		resizeMode: 'contain',
+		flex: 0.6
+	},
+	row: {
+		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'center',
+		flex: 1
+	},
+	avatar: {
+		width: "80%",
+		height: "80%",
+		resizeMode: 'contain'
+	},
+	text2: {
+		padding: 10,
+		justifyContent: 'center',
+		alignItems: 'center'
 	}
 })
 
