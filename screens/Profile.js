@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Button, TouchableOpacity, Image } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
 import { connect } from 'react-redux'
 import Firebase from '../config/Firebase'
 
@@ -25,14 +25,14 @@ class Profile extends React.Component {
 				</View>
 
 				<View style={styles.backinput}>
-					<TouchableOpacity>
-
+					<TouchableOpacity style={styles.center}>
+						<Text style={ styles.input}>Email: {this.props.user.email}</Text>
 					</TouchableOpacity>
 				</View>
 
 				<View style={styles.backinput}>
-					<TouchableOpacity>
-
+					<TouchableOpacity style={styles.center}>
+					<Text style={ styles.input}>Password: •••••••••••••</Text>
 					</TouchableOpacity>
 				</View>
 
@@ -66,8 +66,6 @@ class Profile extends React.Component {
 					style={{ width: "15%", height: "15%", resizeMode: 'contain', flex: 0.6 }}
 				/>
 
-				{/* <Text>{this.props.user.email}</Text> */}
-
 			</View>
 		)
 	}
@@ -85,6 +83,14 @@ const styles = StyleSheet.create({
 		color: 'white',
 		marginTop: 15,
 		marginBottom: 20,
+	},
+	input: {
+		color: 'white',
+		fontSize: 20,
+	},
+	center: {
+		paddingLeft: 20,
+		justifyContent: 'center',
 	},
 	logout: {
 		fontSize: 30,
@@ -131,8 +137,8 @@ const styles = StyleSheet.create({
 		width: '100%',
 		height: '7%',
 		marginBottom: 20,
+		justifyContent: 'center',
 	}
-
 })
 
 const mapStateToProps = state => {
