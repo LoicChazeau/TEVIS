@@ -30,7 +30,7 @@ export default function Home({ navigation }) {
 				</View>
 			</View>
 			<View style={styles.whathot}>
-				<TouchableOpacity onPress={() => navigation.navigate("Login")} style={[{ flex: 1 }]}>
+				<TouchableOpacity onPress={() => navigation.navigate("Profile")} style={[{ flex: 1 }]}>
 					<Whathot />
 				</TouchableOpacity>
 			</View>
