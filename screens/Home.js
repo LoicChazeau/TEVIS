@@ -16,7 +16,7 @@ export default function Home({ navigation }) {
       <View style={[{ flex: 1 }]}></View>
 
       <View style={[{ flex: 2, backgroundColor: "#F96E4F", justifyContent: "center" }]}>
-        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={[{flex: 1, justifyContent: 'center'}]}>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={[{ flex: 1, justifyContent: 'center' }]}>
           <Whathot />
         </TouchableOpacity>
       </View>
@@ -40,9 +40,9 @@ export default function Home({ navigation }) {
       <View style={[{ flex: 1 }]}></View>
 
       <View style={[{ flex: 2, alignItems: 'center' }]}>
-      <View style={[{ flex: 1, backgroundColor: "#EAC652", justifyContent: "center", borderTopLeftRadius: 20, borderTopRightRadius: 20, width: "30%", alignItems: 'center'}]}>
-        <Settings />
-      </View>
+        <TouchableOpacity onPress={() => navigation.navigate('Settings')} style={[{ flex: 1, backgroundColor: "#EAC652", justifyContent: "center", borderTopLeftRadius: 20, borderTopRightRadius: 20, width: "30%", alignItems: 'center' }]}>
+          <Settings />
+        </TouchableOpacity>
       </View>
     </View>
   );
