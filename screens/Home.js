@@ -48,7 +48,7 @@ class Home extends React.Component {
 					</View>
 				</View>
 				<View style={styles.whathot}>
-					<TouchableOpacity onPress={() => this.props.navigation.navigate('Profile')} style={[{ flex: 1 }]}>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('Whathot')} style={[{ flex: 1 }]}>
 						<Whathot />
 					</TouchableOpacity>
 				</View>

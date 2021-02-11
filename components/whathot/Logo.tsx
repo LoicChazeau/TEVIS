@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, Image} from 'react-native'
+import {View, StyleSheet, Image} from 'react-native'
 
 export default function Logo() {
   return(
@@ -7,7 +7,7 @@ export default function Logo() {
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
         <Image
           source={require("../../assets/logotevis.png")}
-          style={{ width: 63, height: 63 }}
+          style={{ width: 54, height: 54 }}
         />
         </View>
       </View>
@@ -16,9 +16,9 @@ export default function Logo() {
 
 const styles = StyleSheet.create({
   circle: {
-    width: 82,
-    height: 82,
-    borderRadius: 41,
+    width: 74,
+    height: 74,
+    borderRadius: 37,
     borderColor: '#2D9BF0',
     borderStyle: 'solid',
     borderWidth: 5,
