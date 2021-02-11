@@ -18,6 +18,7 @@ import Login from "./screens/Login.js";
 import Settings from "./screens/Settings.js";
 import Signup from "./screens/Signup.js";
 import Profile from "./screens/Profile.js";
+import Avatar from "./screens/Avatar.js";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Avatar" component={Avatar} />
       </Stack.Navigator>
     </NavigationContainer>
     </Provider>

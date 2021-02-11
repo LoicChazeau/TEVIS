@@ -42,7 +42,7 @@ class Profile extends React.Component {
 					</TouchableOpacity>
 				</View>
 
-				<View style={styles.row}>
+				<TouchableOpacity onPress={() => this.props.navigation.navigate('Avatar')} style={styles.row}>
 					<Image
 						source={require("../assets/avatar.png")}
 						style={styles.avatar}
@@ -50,7 +50,7 @@ class Profile extends React.Component {
 					<View style={styles.changebtn}>
 						<Text style={styles.change}>Change</Text>
 					</View>
-				</View>
+				</TouchableOpacity>
 
 				<View style={styles.historybtn}>
 					<TouchableOpacity>
@@ -61,10 +61,12 @@ class Profile extends React.Component {
 					</TouchableOpacity>
 				</View>
 
-				<Image
-					source={require("../assets/back.png")}
-					style={styles.back}
-				/>
+				<TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}>
+					<Image
+						source={require("../assets/back.png")}
+						style={styles.back}
+					/>
+				</TouchableOpacity>
 
 			</View>
 		)
@@ -140,10 +142,9 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 	back: {
-		width: "15%",
-		height: "15%",
+		width: 80,
+		height: 80,
 		resizeMode: 'contain',
-		flex: 0.6
 	},
 	row: {
 		flexDirection: 'row',
