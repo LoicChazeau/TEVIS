@@ -29,10 +29,10 @@ export default function Settings({ navigation }) {
     fetch("http://127.0.0.1:8000/api/Pages/", requestOptions)
       .then((response) => response.text())
       .then((result) => setData(JSON.parse(result)["Pages"][0]))
-      // .then((result) =>data=JSON.parse(result)["Pages"][0])
+      // .then((result) =>data=JSON.parse(result)["Pages"][0]) 
       .catch((error) => console.error(error))
-      .finally(() => setLoading(false));
-    //   {data.map(page => <Text>{page.Id}</Text>)} QUAND TU VEUT LE FAIRE APPARAITRE OUESH
+      .finally(() => setLoading(false));  
+    //   {data.map(page => <Text>{page.Id}</Text>)} QUAND TU VEUT LE FAIRE APPARAITRE OUESH  dqsd
   }, []);
 
     return (
