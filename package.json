@@ -10,7 +10,7 @@
   "dependencies": {
     "@firebase/firestore": "^1.11.0",
     "@react-native-community/masked-view": "0.1.10",
-    "@react-native-picker/picker": "^1.9.10",
+    "@react-native-picker/picker": "1.9.2",
     "@react-navigation/native": "^5.9.2",
     "@react-navigation/stack": "^5.14.2",
     "body-parser": "^1.19.0",
@@ -21,15 +21,14 @@
     "mysql": "^2.18.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-
     "react-native": "*",
     "react-native-auth0": "^2.7.0",
     "react-native-dotenv": "^2.5.1",
     "react-native-elements": "^3.1.0",
     "react-native-expo-auth": "^1.0.1",
     "react-native-gesture-handler": "~1.8.0",
-    "react-native-picker-select": "^8.0.4",
     "react-native-material-design-searchbar": "^1.8.0",
+    "react-native-picker-select": "^8.0.4",
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "3.1.9",
     "react-native-screens": "~2.15.2",
@@ -40,7 +39,6 @@
     "react-responsive-searchbox": "^1.1.4",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
-    
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
