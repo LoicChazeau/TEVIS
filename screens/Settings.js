@@ -1,6 +1,6 @@
 
 import { setStatusBarBackgroundColor } from 'expo-status-bar';
-import React, { useEffect,useState, Component } from 'react';
+import React, { useEffect, useState, Component } from 'react';
 import { StatusBar, Platform, Switch, StyleSheet, Text, View, Button, SafeAreaView, Image, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -17,24 +17,24 @@ export default function Settings({ navigation }) {
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
-    
+
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState([]);
 
 
-  var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-  };
-  useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/Pages/", requestOptions)
-      .then((response) => response.text())
-      .then((result) => setData(JSON.parse(result)["Pages"][0]))
-      // .then((result) =>data=JSON.parse(result)["Pages"][0]) 
-      .catch((error) => console.error(error))
-      .finally(() => setLoading(false));  
-    //   {data.map(page => <Text>{page.Id}</Text>)} QUAND TU VEUT LE FAIRE APPARAITRE OUESH 
-  }, []);
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
+    useEffect(() => {
+        fetch("http://127.0.0.1:8000/api/Pages/", requestOptions)
+            .then((response) => response.text())
+            .then((result) => setData(JSON.parse(result)["Pages"][0]))
+            // .then((result) =>data=JSON.parse(result)["Pages"][0]) 
+            .catch((error) => console.error(error))
+            .finally(() => setLoading(false));
+        //   {data.map(page => <Text>{page.Id}</Text>)} QUAND TU VEUT LE FAIRE APPARAITRE OUESH 
+    }, []);
 
     return (
         <SafeAreaView style={styles.Container_set}>
