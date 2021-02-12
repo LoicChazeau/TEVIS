@@ -63,7 +63,7 @@ class Home extends React.Component {
 				</View>
 				<View style={[{ flex: 0.9 }]}></View>
 				<View style={styles.history}>
-					<TouchableOpacity style={{ flex: 1 }}>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('Likehistory')} style={{ flex: 1 }}>
 						<History />
 					</TouchableOpacity>
 				</View>
