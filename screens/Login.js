@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { View, TextInput, StyleSheet, TouchableOpacity, Text, Image } from 'react-native'
 import { bindActionCreators } from 'redux'
@@ -127,3 +128,4 @@ export default Login = connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(Login)
+

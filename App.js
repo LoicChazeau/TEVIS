@@ -4,6 +4,9 @@ import { Text, View, StyleSheet } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+
+
+
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import thunkMiddleware from 'redux-thunk'
@@ -34,6 +37,7 @@ export default function App() {
       </Stack.Navigator>
     </NavigationContainer>
     </Provider>
+
   );
 }
 

@@ -1,12 +1,15 @@
 import React from "react";
+
 import { View, StyleSheet, TouchableOpacity, Text, Image } from "react-native";
 import { connect } from 'react-redux'
+
 
 import History from "../components/home/History";
 import Logo from "../components/home/Logo";
 import Newcomment from "../components/home/Newcomment";
 import Searchbar from "../components/home/Searchbar";
 import Settings from "../components/home/Settings";
+
 import Whathot from "../components/home/Whathot";
 
 class Home extends React.Component {
@@ -146,3 +149,4 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(Home)
+
