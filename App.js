@@ -23,13 +23,15 @@ import Signup from "./screens/Signup.js";
 import Profile from "./screens/Profile.js";
 import Avatar from "./screens/Avatar.js";
 import Whathot from "./screens/Whathot.js";
+import Likehistory from "./screens/Likehistory.js";
+import Commenthistory from "./screens/Commenthistory.js";
 
 
 export default function App() {
   return (
     <Provider store={store}>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Likehistory" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Settings" component={Settings} />
         <Stack.Screen name="Login" component={Login} />
@@ -37,6 +39,8 @@ export default function App() {
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Avatar" component={Avatar} />
         <Stack.Screen name="Whathot" component={Whathot} />
+        <Stack.Screen name="Likehistory" component={Likehistory} />
+        <Stack.Screen name="Commenthistory" component={Commenthistory} />
       </Stack.Navigator>
     </NavigationContainer>
     </Provider>
