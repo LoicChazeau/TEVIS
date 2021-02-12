@@ -1,22 +1,13 @@
-
 import React from 'react'
 import { View, TextInput, StyleSheet, TouchableOpacity, Text, Image } from 'react-native'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { updateEmail, updatePassword, login, getUser } from '../actions/user'
-import Firebase from '../config/Firebase'
+import { updateEmail, updatePassword, signup } from '../actions/user'
 
-class Login extends React.Component {
-	componentDidMount = () => {
-		Firebase.auth().onAuthStateChanged(user => {
-			if (user) {
-				this.props.getUser(user.uid)
-				if (this.props.user != null) {
-					console.log(user.displayName)
-					this.props.navigation.navigate('Profile')
-				}
-			}
-		})
+class Signup extends React.Component {
+	handleSignUp = () => {
+		this.props.signup()
+		this.props.navigation.navigate('Home')
 	}
 
 	render() {
@@ -48,15 +39,15 @@ class Login extends React.Component {
 					secureTextEntry={true}
 				/>
 
-				<View style={styles.loginbtn}>
-					<TouchableOpacity onPress={() => this.props.login()}>
-						<Text style={styles.text}>Login</Text>
+				<View style={styles.createbtn}>
+					<TouchableOpacity onPress={this.handleSignUp}>
+						<Text style={styles.text}>Create account</Text>
 					</TouchableOpacity>
 				</View>
 
-				<View style={styles.createbtn} >
-					<TouchableOpacity onPress={() => this.props.navigation.navigate('Signup')}>
-						<Text style={styles.text}>Create account</Text>
+				<View style={styles.loginbtn} >
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('Login')}>
+						<Text style={styles.text}>Already registered</Text>
 					</TouchableOpacity >
 				</View>
 
@@ -82,7 +73,7 @@ const styles = StyleSheet.create({
 		paddingLeft: 10,
 		marginTop: 25,
 	},
-	loginbtn: {
+	createbtn: {
 		backgroundColor: '#F96E4F',
 		width: '85%',
 		height: '8.5%',
@@ -92,7 +83,7 @@ const styles = StyleSheet.create({
 		marginTop: 90,
 		marginBottom: 25,
 	},
-	createbtn: {
+	loginbtn: {
 		backgroundColor: '#2D9BF0',
 		width: '85%',
 		height: '8.5%',
@@ -115,7 +106,7 @@ const styles = StyleSheet.create({
 })
 
 const mapDispatchToProps = dispatch => {
-	return bindActionCreators({ updateEmail, updatePassword, login, getUser }, dispatch)
+	return bindActionCreators({ updateEmail, updatePassword, signup }, dispatch)
 }
 
 const mapStateToProps = state => {
@@ -124,8 +115,7 @@ const mapStateToProps = state => {
 	}
 }
 
-export default Login = connect(
+export default Signup = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(Login)
-
+)(Signup)
