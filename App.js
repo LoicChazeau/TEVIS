@@ -31,7 +31,7 @@ export default function App() {
   return (
     <Provider store={store}>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Settings" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Commenthistory" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Settings" component={Settings} />
         <Stack.Screen name="Login" component={Login} />

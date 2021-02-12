@@ -2,7 +2,6 @@ import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity, ScrollView, Image } from "react-native";
 import RNPickerSelect from "react-native-picker-select";
 
-
 import Logo from "../components/history/Logo";
 
 export default function Likehistory({ navigation }) {
@@ -11,34 +10,41 @@ export default function Likehistory({ navigation }) {
       <View style={styles.container}>
 
         <View style={{ marginTop: 25, flexDirection: 'row', paddingLeft: 117 }}>
+        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
           <Logo />
-          <View style={{ justifyContent: 'center', alignItems: 'center', paddingLeft: 25 }}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Commenthistory')} style={{ justifyContent: 'center', alignItems: 'center', paddingLeft: 25 }}>
             <Image
               source={require("../assets/arrow.png")}
               style={{ maxHeight: 160, maxWidth: 160, resizeMode: 'contain', height: "60%", width: '60%' }}
             />
             <Text style={{ color: 'white', fontSize: 12, fontWeight: 'bold', paddingTop: 7 }}>Comment History</Text>
-          </View>
+          </TouchableOpacity>
         </View>
 
         <Text style={{ color: 'white', fontSize: 40, fontWeight: 'bold', paddingTop: 25 }}>Like History</Text>
 
-      <View style={{ flexDirection: 'row'}}>
-        <Image
-              source={require("../assets/back.png")}
-              style={{ maxHeight: 160, maxWidth: 160, resizeMode: 'contain', height: "60%", width: '60%' }}
-            />
+        <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 25 }}>
+          {/* <TouchableOpacity onPress={() => navigation.navigate('Commenthistory')} style={{ flex: 1 }}> */}
+          <Image
+            source={require("../assets/back.png")}
+            style={{ maxHeight: 160, maxWidth: 160, resizeMode: 'contain', height: "100%", width: '100%' }}
+          />
+          {/* </TouchableOpacity> */}
+          <RNPickerSelect
+            placeholder={{
+              label: 'Most recent',
+              value: 'Most recent',
+            }}
+            onValueChange={(value) => console.log(value)}
+            items={[
+              { label: "Least recent", value: "Least recent" },
+              { label: "Most rated", value: "Most rated" },
+              { label: "Least rated", value: "Least rated" },
+            ]}
+          />
 
-<RNPickerSelect
-						onValueChange={(value) => console.log(value)}
-						items={[
-							{ label: "On screen", value: "On screen" },
-							{ label: "On tap", value: "On tap" },
-							{ label: "Never", value: "Never" },
-						]}
-					/>
-
-            </View>
+        </View>
 
 
 
