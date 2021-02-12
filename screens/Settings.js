@@ -32,7 +32,7 @@ export default function Settings({ navigation }) {
       // .then((result) =>data=JSON.parse(result)["Pages"][0]) 
       .catch((error) => console.error(error))
       .finally(() => setLoading(false));  
-    //   {data.map(page => <Text>{page.Id}</Text>)} QUAND TU VEUT LE FAIRE APPARAITRE OUESH  dqsd
+    //   {data.map(page => <Text>{page.Id}</Text>)} QUAND TU VEUT LE FAIRE APPARAITRE OUESH 
   }, []);
 
     return (
