@@ -9,16 +9,16 @@ export default function Commenthistory({ navigation }) {
     <ScrollView style={{ backgroundColor: "#1A1C1E" }}>
       <View style={styles.container}>
 
-        <View style={{ marginTop: 25, flexDirection: 'row', paddingLeft: 117 }}>
-        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-          <Logo />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Likehistory')} style={{ justifyContent: 'center', alignItems: 'center', paddingLeft: 25 }}>
+        <View style={{ marginTop: 25, flexDirection: 'row', paddingRight: 105 }}>
+          <TouchableOpacity onPress={() => navigation.navigate('Likehistory')} style={{ justifyContent: 'center', alignItems: 'center', paddingRight: 35 }}>
             <Image
-              source={require("../assets/arrow.png")}
+              source={require("../assets/arrowleft.png")}
               style={{ maxHeight: 160, maxWidth: 160, resizeMode: 'contain', height: "60%", width: '60%' }}
             />
             <Text style={{ color: 'white', fontSize: 12, fontWeight: 'bold', paddingTop: 7 }}>Like History</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+          <Logo />
           </TouchableOpacity>
         </View>
 

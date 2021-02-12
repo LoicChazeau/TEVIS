@@ -13,9 +13,9 @@ export default function Likehistory({ navigation }) {
         <TouchableOpacity onPress={() => navigation.navigate('Home')}>
           <Logo />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Commenthistory')} style={{ justifyContent: 'center', alignItems: 'center', paddingLeft: 25 }}>
+          <TouchableOpacity onPress={() => navigation.navigate('Commenthistory')} style={{ justifyContent: 'center', alignItems: 'center', paddingLeft: 20 }}>
             <Image
-              source={require("../assets/arrow.png")}
+              source={require("../assets/arrowright.png")}
               style={{ maxHeight: 160, maxWidth: 160, resizeMode: 'contain', height: "60%", width: '60%' }}
             />
             <Text style={{ color: 'white', fontSize: 12, fontWeight: 'bold', paddingTop: 7 }}>Comment History</Text>
