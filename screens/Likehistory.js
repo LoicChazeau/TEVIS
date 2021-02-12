@@ -1,5 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity, ScrollView, Image } from "react-native";
+import RNPickerSelect from "react-native-picker-select";
+
 
 import Logo from "../components/history/Logo";
 
@@ -8,9 +10,38 @@ export default function Likehistory({ navigation }) {
     <ScrollView style={{ backgroundColor: "#1A1C1E" }}>
       <View style={styles.container}>
 
-        <View>
+        <View style={{ marginTop: 25, flexDirection: 'row', paddingLeft: 117 }}>
           <Logo />
+          <View style={{ justifyContent: 'center', alignItems: 'center', paddingLeft: 25 }}>
+            <Image
+              source={require("../assets/arrow.png")}
+              style={{ maxHeight: 160, maxWidth: 160, resizeMode: 'contain', height: "60%", width: '60%' }}
+            />
+            <Text style={{ color: 'white', fontSize: 12, fontWeight: 'bold', paddingTop: 7 }}>Comment History</Text>
+          </View>
         </View>
+
+        <Text style={{ color: 'white', fontSize: 40, fontWeight: 'bold', paddingTop: 25 }}>Like History</Text>
+
+      <View style={{ flexDirection: 'row'}}>
+        <Image
+              source={require("../assets/back.png")}
+              style={{ maxHeight: 160, maxWidth: 160, resizeMode: 'contain', height: "60%", width: '60%' }}
+            />
+
+<RNPickerSelect
+						onValueChange={(value) => console.log(value)}
+						items={[
+							{ label: "On screen", value: "On screen" },
+							{ label: "On tap", value: "On tap" },
+							{ label: "Never", value: "Never" },
+						]}
+					/>
+
+            </View>
+
+
+
 
         <View style={{ flexDirection: "row", marginTop: 30, justifyContent: "space-around", width: '100%' }}>
           <View style={{ flex: 1, width: '45%', paddingLeft: 25 }}>
