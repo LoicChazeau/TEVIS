@@ -22,18 +22,21 @@ import Settings from "./screens/Settings.js";
 import Signup from "./screens/Signup.js";
 import Profile from "./screens/Profile.js";
 import Avatar from "./screens/Avatar.js";
+import Whathot from "./screens/Whathot.js";
+
 
 export default function App() {
   return (
     <Provider store={store}>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Whathot" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Settings" component={Settings} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Avatar" component={Avatar} />
+        <Stack.Screen name="Whathot" component={Whathot} />
       </Stack.Navigator>
     </NavigationContainer>
     </Provider>
