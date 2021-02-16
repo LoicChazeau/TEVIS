@@ -18,7 +18,7 @@ export default function Commenthistory({ navigation }) {
             <Text style={{ color: 'white', fontSize: 12, fontWeight: 'bold', paddingTop: 7 }}>Like History</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-          <Logo />
+            <Logo />
           </TouchableOpacity>
         </View>
 
@@ -43,154 +43,165 @@ export default function Commenthistory({ navigation }) {
               { label: "Least rated", value: "Least rated" },
             ]}
           />
+        </View>
 
+        <View style={{ flexDirection: "column", marginTop: 20 }}>
+            <View style={{ marginLeft: 30, backgroundColor: '#F96E4F', borderTopLeftRadius: 7, borderTopRightRadius: 7, width: 110, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingTop: 5, paddingBottom: 5 }}>
+              <Text style={{ color: 'white', fontSize: 14, paddingRight: 10 }}>Rated: 4.6</Text>
+              <Image
+                source={require("../assets/medal.png")}
+                style={{ resizeMode: "contain", width: 20, height: 20 }}
+              />
+            </View>
+          <View style={{ flexDirection: "row", justifyContent: "space-around", width: '100%', alignItems: 'center' }}>
+            <View style={{ flex: 1, width: '80%', marginLeft: 10, borderWidth: 3, borderColor: 'gray', borderRadius: 7 }}>
+              <Text style={{ color: 'white', padding: 10 }}>Contrairement à la croyance populaire, Lorem Ipsum n'est pas simplement
+              Il a ses racines dans un morceau de littérature latine classique de 45 avant JC, ce qui en fait plus de 2000 ans.
+              Richard McClintock, a recherché l'un des mots latins les plus obscurs, consectetur, d'un passage</Text>
+            </View>
+            <View style={{
+              width: 50, height: 50, marginRight: 15, marginLeft: 7, borderWidth: 2,
+              borderColor: 'gray', borderRadius: 10, alignItems: 'center'
+            }}>
+              <View style={{ flexDirection: 'column', paddingTop: 5 }}>
+                <Image
+                  source={require("../assets/eye.png")}
+                  style={{ resizeMode: 'contain', height: "100%", width: '100%' }}
+                />
+                <Text style={{ color: '#F96E4F' }}>View</Text>
+              </View>
+            </View>
+          </View>
+        </View>
+
+
+
+        <View style={{ flexDirection: "column", marginTop: 20 }}>
+            <View style={{ marginLeft: 30, backgroundColor: '#F96E4F', borderTopLeftRadius: 7, borderTopRightRadius: 7, width: 110, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingTop: 5, paddingBottom: 5 }}>
+              <Text style={{ color: 'white', fontSize: 14, paddingRight: 10 }}>Rated: 4.6</Text>
+              <Image
+                source={require("../assets/medal.png")}
+                style={{ resizeMode: "contain", width: 20, height: 20 }}
+              />
+            </View>
+          <View style={{ flexDirection: "row", justifyContent: "space-around", width: '100%', alignItems: 'center' }}>
+            <View style={{ flex: 1, width: '80%', marginLeft: 10, borderWidth: 3, borderColor: 'gray', borderRadius: 7 }}>
+              <Text style={{ color: 'white', padding: 10 }}>Contrairement à la croyance populaire, Lorem Ipsum n'est pas simplement
+              Il a ses racines dans un morceau de littérature latine classique de 45 avant JC, ce qui en fait plus de 2000 ans.
+              Richard McClintock, a recherché l'un des mots latins les plus obscurs, consectetur, d'un passage</Text>
+            </View>
+            <View style={{
+              width: 50, height: 50, marginRight: 15, marginLeft: 7, borderWidth: 2,
+              borderColor: 'gray', borderRadius: 10, alignItems: 'center'
+            }}>
+              <View style={{ flexDirection: 'column', paddingTop: 5 }}>
+                <Image
+                  source={require("../assets/eye.png")}
+                  style={{ resizeMode: 'contain', height: "100%", width: '100%' }}
+                />
+                <Text style={{ color: '#F96E4F' }}>View</Text>
+              </View>
+            </View>
+          </View>
         </View>
 
 
 
 
-        <View style={{ flexDirection: "row", marginTop: 30, justifyContent: "space-around", width: '100%' }}>
-          <View style={{ flex: 1, width: '45%', paddingLeft: 25 }}>
-            <Image
-              source={require("../assets/yeezy.jpeg")}
-              style={{ maxHeight: 160, maxWidth: 160, resizeMode: 'contain', height: "100%", width: '100%' }}
-            />
-          </View>
-          <View style={{ width: "45%", paddingRight: 25 }}>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
-              <Text style={{ fontSize: 24, textAlign: "center", color: 'white' }}>Yeezy 350</Text>
-            </View>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
-              <Image
-                source={require("../assets/comment_orange.png")}
-                style={{ resizeMode: "contain", width: 'auto', height: 'auto', minHeight: 80, minWidth: 80 }}
-              />
-              <Text style={{ position: "absolute", color: 'white', fontSize: 30, paddingBottom: 12 }}>1251</Text>
-            </View>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1, flexDirection: 'row' }}>
-              <Text style={{ color: 'white', fontSize: 28, paddingBottom: 5, paddingRight: 8 }}>3.5/5</Text>
+        <View style={{ flexDirection: "column", marginTop: 20 }}>
+            <View style={{ marginLeft: 30, backgroundColor: '#F96E4F', borderTopLeftRadius: 7, borderTopRightRadius: 7, width: 110, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingTop: 5, paddingBottom: 5 }}>
+              <Text style={{ color: 'white', fontSize: 14, paddingRight: 10 }}>Rated: 4.6</Text>
               <Image
                 source={require("../assets/medal.png")}
-                style={{ resizeMode: "contain", width: 'auto', height: 'auto', minHeight: 40, minWidth: 40 }}
+                style={{ resizeMode: "contain", width: 20, height: 20 }}
               />
+            </View>
+          <View style={{ flexDirection: "row", justifyContent: "space-around", width: '100%', alignItems: 'center' }}>
+            <View style={{ flex: 1, width: '80%', marginLeft: 10, borderWidth: 3, borderColor: 'gray', borderRadius: 7 }}>
+              <Text style={{ color: 'white', padding: 10 }}>Contrairement à la croyance populaire, Lorem Ipsum n'est pas simplement
+              Il a ses racines dans un morceau de littérature latine classique de 45 avant JC, ce qui en fait plus de 2000 ans.
+              Richard McClintock, a recherché l'un des mots latins les plus obscurs, consectetur, d'un passage</Text>
+            </View>
+            <View style={{
+              width: 50, height: 50, marginRight: 15, marginLeft: 7, borderWidth: 2,
+              borderColor: 'gray', borderRadius: 10, alignItems: 'center'
+            }}>
+              <View style={{ flexDirection: 'column', paddingTop: 5 }}>
+                <Image
+                  source={require("../assets/eye.png")}
+                  style={{ resizeMode: 'contain', height: "100%", width: '100%' }}
+                />
+                <Text style={{ color: '#F96E4F' }}>View</Text>
+              </View>
             </View>
           </View>
         </View>
 
-        <View style={{ flexDirection: "row", marginTop: 30, justifyContent: "space-around", width: '100%' }}>
-          <View style={{ flex: 1, width: '45%', paddingLeft: 25 }}>
-            <Image
-              source={require("../assets/yeezy.jpeg")}
-              style={{ maxHeight: 160, maxWidth: 160, resizeMode: 'contain', height: "100%", width: '100%' }}
-            />
-          </View>
-          <View style={{ width: "45%", paddingRight: 25 }}>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
-              <Text style={{ fontSize: 24, textAlign: "center", color: 'white' }}>Yeezy 350</Text>
-            </View>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
-              <Image
-                source={require("../assets/comment_orange.png")}
-                style={{ resizeMode: "contain", width: 'auto', height: 'auto', minHeight: 80, minWidth: 80 }}
-              />
-              <Text style={{ position: "absolute", color: 'white', fontSize: 30, paddingBottom: 12 }}>1251</Text>
-            </View>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1, flexDirection: 'row' }}>
-              <Text style={{ color: 'white', fontSize: 28, paddingBottom: 5, paddingRight: 8 }}>3.5/5</Text>
+
+
+
+        <View style={{ flexDirection: "column", marginTop: 20 }}>
+            <View style={{ marginLeft: 30, backgroundColor: '#F96E4F', borderTopLeftRadius: 7, borderTopRightRadius: 7, width: 110, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingTop: 5, paddingBottom: 5 }}>
+              <Text style={{ color: 'white', fontSize: 14, paddingRight: 10 }}>Rated: 4.6</Text>
               <Image
                 source={require("../assets/medal.png")}
-                style={{ resizeMode: "contain", width: 'auto', height: 'auto', minHeight: 40, minWidth: 40 }}
+                style={{ resizeMode: "contain", width: 20, height: 20 }}
               />
+            </View>
+          <View style={{ flexDirection: "row", justifyContent: "space-around", width: '100%', alignItems: 'center' }}>
+            <View style={{ flex: 1, width: '80%', marginLeft: 10, borderWidth: 3, borderColor: 'gray', borderRadius: 7 }}>
+              <Text style={{ color: 'white', padding: 10 }}>Contrairement à la croyance populaire, Lorem Ipsum n'est pas simplement
+              Il a ses racines dans un morceau de littérature latine classique de 45 avant JC, ce qui en fait plus de 2000 ans.
+              Richard McClintock, a recherché l'un des mots latins les plus obscurs, consectetur, d'un passage</Text>
+            </View>
+            <View style={{
+              width: 50, height: 50, marginRight: 15, marginLeft: 7, borderWidth: 2,
+              borderColor: 'gray', borderRadius: 10, alignItems: 'center'
+            }}>
+              <View style={{ flexDirection: 'column', paddingTop: 5 }}>
+                <Image
+                  source={require("../assets/eye.png")}
+                  style={{ resizeMode: 'contain', height: "100%", width: '100%' }}
+                />
+                <Text style={{ color: '#F96E4F' }}>View</Text>
+              </View>
             </View>
           </View>
         </View>
 
-        <View style={{ flexDirection: "row", marginTop: 30, justifyContent: "space-around", width: '100%' }}>
-          <View style={{ flex: 1, width: '45%', paddingLeft: 25 }}>
-            <Image
-              source={require("../assets/yeezy.jpeg")}
-              style={{ maxHeight: 160, maxWidth: 160, resizeMode: 'contain', height: "100%", width: '100%' }}
-            />
-          </View>
-          <View style={{ width: "45%", paddingRight: 25 }}>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
-              <Text style={{ fontSize: 24, textAlign: "center", color: 'white' }}>Yeezy 350</Text>
-            </View>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
-              <Image
-                source={require("../assets/comment_orange.png")}
-                style={{ resizeMode: "contain", width: 'auto', height: 'auto', minHeight: 80, minWidth: 80 }}
-              />
-              <Text style={{ position: "absolute", color: 'white', fontSize: 30, paddingBottom: 12 }}>1251</Text>
-            </View>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1, flexDirection: 'row' }}>
-              <Text style={{ color: 'white', fontSize: 28, paddingBottom: 5, paddingRight: 8 }}>3.5/5</Text>
-              <Image
-                source={require("../assets/medal.png")}
-                style={{ resizeMode: "contain", width: 'auto', height: 'auto', minHeight: 40, minWidth: 40 }}
-              />
-            </View>
-          </View>
-        </View>
 
-        <View style={{ flexDirection: "row", marginTop: 30, justifyContent: "space-around", width: '100%' }}>
-          <View style={{ flex: 1, width: '45%', paddingLeft: 25 }}>
-            <Image
-              source={require("../assets/yeezy.jpeg")}
-              style={{ maxHeight: 160, maxWidth: 160, resizeMode: 'contain', height: "100%", width: '100%' }}
-            />
-          </View>
-          <View style={{ width: "45%", paddingRight: 25 }}>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
-              <Text style={{ fontSize: 24, textAlign: "center", color: 'white' }}>Yeezy 350</Text>
-            </View>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
-              <Image
-                source={require("../assets/comment_orange.png")}
-                style={{ resizeMode: "contain", width: 'auto', height: 'auto', minHeight: 80, minWidth: 80 }}
-              />
-              <Text style={{ position: "absolute", color: 'white', fontSize: 30, paddingBottom: 12 }}>1251</Text>
-            </View>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1, flexDirection: 'row' }}>
-              <Text style={{ color: 'white', fontSize: 28, paddingBottom: 5, paddingRight: 8 }}>3.5/5</Text>
-              <Image
-                source={require("../assets/medal.png")}
-                style={{ resizeMode: "contain", width: 'auto', height: 'auto', minHeight: 40, minWidth: 40 }}
-              />
-            </View>
-          </View>
-        </View>
 
-        <View style={{ flexDirection: "row", marginTop: 30, justifyContent: "space-around", width: '100%' }}>
-          <View style={{ flex: 1, width: '45%', paddingLeft: 25 }}>
-            <Image
-              source={require("../assets/yeezy.jpeg")}
-              style={{ maxHeight: 160, maxWidth: 160, resizeMode: 'contain', height: "100%", width: '100%' }}
-            />
-          </View>
-          <View style={{ width: "45%", paddingRight: 25 }}>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
-              <Text style={{ fontSize: 24, textAlign: "center", color: 'white' }}>Yeezy 350</Text>
-            </View>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
-              <Image
-                source={require("../assets/comment_orange.png")}
-                style={{ resizeMode: "contain", width: 'auto', height: 'auto', minHeight: 80, minWidth: 80 }}
-              />
-              <Text style={{ position: "absolute", color: 'white', fontSize: 30, paddingBottom: 12 }}>1251</Text>
-            </View>
-            <View style={{ alignItems: "center", justifyContent: "center", flex: 1, flexDirection: 'row' }}>
-              <Text style={{ color: 'white', fontSize: 28, paddingBottom: 5, paddingRight: 8 }}>3.5/5</Text>
+
+        <View style={{ flexDirection: "column", marginTop: 20 }}>
+            <View style={{ marginLeft: 30, backgroundColor: '#F96E4F', borderTopLeftRadius: 7, borderTopRightRadius: 7, width: 110, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingTop: 5, paddingBottom: 5 }}>
+              <Text style={{ color: 'white', fontSize: 14, paddingRight: 10 }}>Rated: 4.6</Text>
               <Image
                 source={require("../assets/medal.png")}
-                style={{ resizeMode: "contain", width: 'auto', height: 'auto', minHeight: 40, minWidth: 40 }}
+                style={{ resizeMode: "contain", width: 20, height: 20 }}
               />
+            </View>
+          <View style={{ flexDirection: "row", justifyContent: "space-around", width: '100%', alignItems: 'center' }}>
+            <View style={{ flex: 1, width: '80%', marginLeft: 10, borderWidth: 3, borderColor: 'gray', borderRadius: 7 }}>
+              <Text style={{ color: 'white', padding: 10 }}>Contrairement à la croyance populaire, Lorem Ipsum n'est pas simplement
+              Il a ses racines dans un morceau de littérature latine classique de 45 avant JC, ce qui en fait plus de 2000 ans.
+              Richard McClintock, a recherché l'un des mots latins les plus obscurs, consectetur, d'un passage</Text>
+            </View>
+            <View style={{
+              width: 50, height: 50, marginRight: 15, marginLeft: 7, borderWidth: 2,
+              borderColor: 'gray', borderRadius: 10, alignItems: 'center'
+            }}>
+              <View style={{ flexDirection: 'column', paddingTop: 5 }}>
+                <Image
+                  source={require("../assets/eye.png")}
+                  style={{ resizeMode: 'contain', height: "100%", width: '100%' }}
+                />
+                <Text style={{ color: '#F96E4F' }}>View</Text>
+              </View>
             </View>
           </View>
         </View>
 
       </View>
-
     </ScrollView>
 
   );
