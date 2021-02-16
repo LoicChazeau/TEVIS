@@ -23,7 +23,7 @@
     "react-dom": "16.13.1",
     "react-native": "*",
     "react-native-auth0": "^2.7.0",
-    "react-native-dotenv": "^2.5.1",
+    "react-native-dotenv": "^2.5.3",
     "react-native-elements": "^3.1.0",
     "react-native-expo-auth": "^1.0.1",
     "react-native-gesture-handler": "~1.8.0",

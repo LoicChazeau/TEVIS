@@ -3,7 +3,7 @@ import {
 	AUTH_DOMAIN,
 	MESSAGE_SENDER_ID,
 	APP_ID
-} from 'react-native-dotenv'
+} from '@env'
 import 'firebase/firestore'
 
 const firebaseConfig = {
