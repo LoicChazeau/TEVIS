@@ -25,13 +25,13 @@ import Avatar from "./screens/Avatar.js";
 import Whathot from "./screens/Whathot.js";
 import Likehistory from "./screens/Likehistory.js";
 import Commenthistory from "./screens/Commenthistory.js";
-
+import Addcomment from "./screens/Addcomment.js";
 
 export default function App() {
   return (
     <Provider store={store}>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Addcomment" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Settings" component={Settings} />
         <Stack.Screen name="Login" component={Login} />
@@ -41,6 +41,7 @@ export default function App() {
         <Stack.Screen name="Whathot" component={Whathot} />
         <Stack.Screen name="Likehistory" component={Likehistory} />
         <Stack.Screen name="Commenthistory" component={Commenthistory} />
+        <Stack.Screen name="Addcomment" component={Addcomment} />
       </Stack.Navigator>
     </NavigationContainer>
     </Provider>
