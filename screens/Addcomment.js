@@ -106,17 +106,15 @@ return (
         </View>
 
         <View style={{ backgroundColor: "#F96E4F", marginTop: 25, width: '100%', height: '13%', justifyContent: 'center' }}>
-          <View style={{ flexDirection: 'row', marginLeft: 30, marginRight: 30 }}>
-            <View style={{ flex: 0.75 }}>
+          <TouchableOpacity style={{ flexDirection: 'row', marginLeft: 30, marginRight: 30, paddingLeft: 50 }}>
+            <View style={{ width: '40%' }}>
               <Image
-                source={require("../assets/flame.png")}
-                style={{ width: '100%', height: '100%', resizeMode: 'contain' }}
+                source={require("../assets/post.png")}
+                style={{ width: '100%', height: '100%', resizeMode: 'contain', marginTop: 4 }}
               />
             </View>
-            <View style={{ justifyContent: 'center', alignItems: 'center' }}>
               <Text style={{ fontSize: 46, color: 'white', fontWeight: 'bold' }}>Post</Text>
-            </View>
-          </View>
+          </TouchableOpacity>
         </View>
 
       </View>
