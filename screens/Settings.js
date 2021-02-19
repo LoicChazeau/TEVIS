@@ -22,12 +22,29 @@ export default function Settings({ navigation }) {
     const [data, setData] = useState([]);
 
 
-  var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-  };
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
+  
+
+    var myHeaders = new Headers();
+    myHeaders.append("Cookie", "NID=209=JcMREj_H0S2JATlhzb4femqHQ-s3yK1b0o9m-z-L4vjHmpdDqY0J3fetnPUdcvDkc-LKh1Rk0FC1B92bpxBC-Avgutk0KcYLYX0m9ATYkLtJrI51qZxUbZLrUwXdHMvWWbA_oL-L3GGSepuP-eFLrJVFX8DFcCQSehLhWIJLHBM");
+    
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+    
+    fetch("google.com", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+
+
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/Pages/", requestOptions)
+    fetch("google.com", requestOptions)
       .then((response) => response.text())
       .then((result) => setData(JSON.parse(result)["Pages"][0]))
       // .then((result) =>data=JSON.parse(result)["Pages"][0]) 
@@ -58,14 +75,15 @@ export default function Settings({ navigation }) {
             </View>
             <View style={styles.subtitle}>
                 <Text style={styles.subtitletxt}>Profile :</Text>
+                
             </View>
             <View style={styles.btn}>
-                <Text style={styles.btn_txt}>Account Settings</Text>
+                <Text style={styles.btn_txt}>Account Settings {data.map(page => <Text>{page.Id}</Text>)}</Text>
                 <Text style={[styles.btn_txt]}> &gt;</Text>
             </View>
             <Divider style={{ width: "80%", margin: 15 }} />
             <View style={styles.subtitle}>
-                <Text style={styles.subtitletxt}>General :</Text>
+                <Text style={styles.subtitletxt}>General :</Text> 
             </View>
             <View style={styles.btn}>
                 <Text style={styles.btn_txt}>Theme</Text>
