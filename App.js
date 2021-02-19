@@ -33,14 +33,12 @@ export default function App() {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Profile" component={Profile} />
-
         <Stack.Screen name="Avatar" component={Avatar} />
         <Stack.Screen name="Whathot" component={Whathot} />
         <Stack.Screen name="Likehistory" component={Likehistory} />
         <Stack.Screen name="Commenthistory" component={Commenthistory} />
         <Stack.Screen name="Addcomment" component={Addcomment} />
         <Stack.Screen name="Item" component={Item} />
-
       </Stack.Navigator>
     </NavigationContainer>
     </Provider>
