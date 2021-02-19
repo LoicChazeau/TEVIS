@@ -1,11 +1,6 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-
-
 
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
@@ -26,12 +21,13 @@ import Whathot from "./screens/Whathot.js";
 import Likehistory from "./screens/Likehistory.js";
 import Commenthistory from "./screens/Commenthistory.js";
 import Addcomment from "./screens/Addcomment.js";
+import Item from "./screens/Item.js";
 
 export default function App() {
   return (
     <Provider store={store}>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Addcomment" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Item" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Settings" component={Settings} />
         <Stack.Screen name="Login" component={Login} />
@@ -42,6 +38,7 @@ export default function App() {
         <Stack.Screen name="Likehistory" component={Likehistory} />
         <Stack.Screen name="Commenthistory" component={Commenthistory} />
         <Stack.Screen name="Addcomment" component={Addcomment} />
+        <Stack.Screen name="Item" component={Item} />
       </Stack.Navigator>
     </NavigationContainer>
     </Provider>
@@ -50,9 +47,3 @@ export default function App() {
 }
 
 const Stack = createStackNavigator();
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
