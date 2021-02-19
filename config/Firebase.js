@@ -18,7 +18,7 @@ const firebaseConfig = {
 // Initialize Firebase
 let Firebase = firebase.initializeApp(firebaseConfig)
 
- export const db = firebase.firestore()
+export const db = firebase.firestore()
 
 // avoid deprecated warnings
 db.settings({

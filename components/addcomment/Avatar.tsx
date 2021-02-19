@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, TouchableOpacity, StyleSheet, Image } from 'react-native'
 
-export default function Logo() {
+export default function Avatar() {
   return (
     <View>
       <Image
