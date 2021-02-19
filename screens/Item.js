@@ -198,10 +198,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 10,
     marginLeft: 10,
-  },
-  back: {
-    resizeMode: "contain",
-    height: "100%",
-    width: "100%",
-  },
+  }
 });
