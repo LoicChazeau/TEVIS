@@ -3,19 +3,15 @@ import { View, Text, StyleSheet, Image } from 'react-native'
 
 export default function Settings() {
   return (
-    <View style={{ flex: 1, flexDirection: 'column', }}>
-
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", marginTop: 10 }}>
+    <View style={styles.col}>
+      <View style={styles.v_image}>
         <Image
           source={require("../../assets/settings.png")}
-          style={{ width: "85%", height: "85%", resizeMode: 'contain' }}
-        />
+          style={styles.image}/>
       </View>
-
       <View style={{ flex: 0.5, justifyContent: 'center' }}>
-        <Text style={styles.text} numberOfLines={1} adjustsFontSizeToFit>Settings</Text>
+        <Text style={styles.text}>Settings</Text>
       </View>
-
     </View>
   );
 }
@@ -26,6 +22,20 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 16,
-    paddingBottom: 10,
+    paddingBottom: 7,
   },
+  col: {
+    flex: 1,
+    flexDirection: 'column'
+  },
+  v_image: {
+    flex: 1,
+    alignItems: "center",
+    marginTop: 10
+  },
+  image: {
+    width: "85%",
+    height: "85%",
+    resizeMode: 'contain' 
+  }
 });

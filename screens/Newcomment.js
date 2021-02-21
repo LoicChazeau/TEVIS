@@ -1,0 +1,66 @@
+import React from "react";
+import { View, StyleSheet, Text, TouchableOpacity, ScrollView, Image, TextInput, Dimensions } from "react-native";
+import Logo from "../components/addcomment/Logo";
+import Avatar from "../components/addcomment/Avatar";
+
+export default function Addcomment({ navigation }) {
+
+  const [value, onChangeText] = React.useState('');
+
+  return (
+    <ScrollView style={{ backgroundColor: "#1A1C1E" }}>
+      <View style={styles.container}>
+
+        <View>
+          <View style={styles.header}>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')} style={{ marginRight: 15 }}>
+              <Logo />
+            </TouchableOpacity>
+            <View style={{ justifyContent: 'center' }}>
+              <Text style={styles.text}>New comment</Text>
+            </View>
+            <TouchableOpacity onPress={() => navigation.navigate('Profile')} style={{ marginLeft: 15 }}>
+              <Avatar />
+            </TouchableOpacity>
+          </View>
+        </View>
+        <TextInput
+          style={{ borderColor: 'gray', borderWidth: 2, width: "80%", borderRadius: 5, backgroundColor: 'white', color: 'gray', fontSize: 16, padding: 15, marginTop: 30 }}
+          onChangeText={text => onChangeText(text)}
+          value={value}
+          placeholder='Paste the link or type research here' />
+
+        <TouchableOpacity onPress={() => navigation.navigate('Newcommenterror')} style={{ marginTop: 40 }}>
+          <Text style={{ color: 'white', fontSize: 20, fontStyle: 'italic' }}>*Route 1*</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate('Newcommentresult')} style={{ marginTop: 20 }}>
+          <Text style={{ color: 'white', fontSize: 20, fontStyle: 'italic' }}>*Route 2*</Text>
+        </TouchableOpacity>
+
+        <Text style={{ color: 'white', fontSize: 24, marginTop: '30%', textAlign: 'center' }}>Type Above and the results will appear here</Text>
+      </View>
+    </ScrollView>
+
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#1A1C1E",
+    alignItems: 'center',
+  },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 10,
+    marginLeft: 10,
+  },
+  text: {
+    fontSize: 26,
+    color: 'white',
+    fontWeight: 'bold',
+  },
+});

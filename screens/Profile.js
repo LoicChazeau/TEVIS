@@ -53,7 +53,7 @@ class Profile extends React.Component {
 				</TouchableOpacity>
 
 				<View style={styles.historybtn}>
-					<TouchableOpacity>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('Likehistory')} >
 						<View style={styles.text2}>
 							<Text style={styles.history}>Like history</Text>
 							<Text style={styles.history}>Comment history</Text>
@@ -61,7 +61,7 @@ class Profile extends React.Component {
 					</TouchableOpacity>
 				</View>
 
-				<TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}>
+				<TouchableOpacity onPress={() => this.props.navigation.goBack()}>
 					<Image
 						source={require("../assets/back.png")}
 						style={styles.back}
@@ -153,8 +153,8 @@ const styles = StyleSheet.create({
 		flex: 1
 	},
 	avatar: {
-		width: "80%",
-		height: "80%",
+		width: 120,
+		height: 120,
 		resizeMode: 'contain'
 	},
 	text2: {

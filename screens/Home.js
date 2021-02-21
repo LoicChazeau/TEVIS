@@ -2,12 +2,12 @@ import React from "react";
 import { View, StyleSheet, TouchableOpacity, Text, Image } from "react-native";
 import { connect } from 'react-redux'
 
-import History from "../components/home/History";
 import Logo from "../components/home/Logo.js";
-import Newcomment from "../components/home/Newcomment";
 import Searchbar from "../components/home/Searchbar.js";
-import Settings from "../components/home/Settings";
 import Whathot from "../components/home/Whathot.js";
+import Newcomment from "../components/home/Newcomment.js";
+import History from "../components/home/History.js";
+import Settings from "../components/home/Settings.js";
 
 class Home extends React.Component {
 	render() {
@@ -39,16 +39,14 @@ class Home extends React.Component {
 						<View>{login}</View>
 					</View>
 				</View>
-
 				<View style={styles.whathot}>
 					<TouchableOpacity onPress={() => this.props.navigation.navigate('Whathot')} style={{ flex: 1 }}>
 						<Whathot />
 					</TouchableOpacity>
 				</View>
-
 				<View style={{ flex: 0.9 }}></View>
 				<View style={styles.newcomment}>
-					<TouchableOpacity onPress={() => this.props.navigation.navigate('Addcomment')} style={{ flex: 1 }}>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('Newcomment')} style={{ flex: 1 }}>
 						<Newcomment />
 					</TouchableOpacity>
 				</View>
