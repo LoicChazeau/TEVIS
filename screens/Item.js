@@ -21,7 +21,7 @@ export default function Item({ navigation }) {
           </TouchableOpacity>
           <View>
             <TextInput
-              style={{ borderColor: 'gray', borderWidth: 2, borderRadius: 5, backgroundColor: 'white', color: 'gray', fontSize: 15, padding: 15, width: 170, marginRight: 15 }}
+              style={{ textAlign: 'center', borderColor: 'gray', borderWidth: 2, borderRadius: 5, backgroundColor: 'white', color: 'gray', fontSize: 15, padding: 15, width: 170, marginRight: 15 }}
               onChangeText={text => onChangeText(text)}
               value={value}
               placeholder='What to comment ?'
@@ -32,19 +32,15 @@ export default function Item({ navigation }) {
           </TouchableOpacity>
         </View>
 
-        <View style={{ marginTop: 20, flexDirection: 'column' }}>
-
-          <View>
-            <Text style={{ color: 'white', fontSize: 16, marginRight: 20, marginLeft: 20, textAlign: 'center' }}>name of the product, name of the produc, name of the product</Text>
+          <View style={{ marginTop: 15 }}>
+            <Text style={{ color: 'white', fontSize: 18, textAlign: 'center' }}>YEEZY 350</Text>
           </View>
-
-          <View style={{ height: Dimensions.get('window').height * 0.3, width: '100%', marginTop: 10 }}>
+          <View style={{ alignItems: 'center', marginTop: 15 }}>
             <Image
               source={require("../assets/yeezy.jpeg")}
-              style={{ resizeMode: 'contain', height: '100%', width: '100%' }}
+              style={{ resizeMode: 'contain', height: 200, width: 200 }}
             />
           </View>
-
           <View style={{ flexDirection: 'row', marginTop: 15, justifyContent: 'space-around', alignItems: 'center', marginRight: 10, marginLeft: 40 }}>
             <TouchableOpacity style={{ paddingRight: 50 }}>
               <Text style={{ color: '#2D9BF0', fontSize: 16 }}>Origin link</Text>
@@ -84,18 +80,18 @@ export default function Item({ navigation }) {
             </View>
           </View>
 
-          <View style={{ width: '65%', height: 1, backgroundColor: '#807F7F', marginLeft: "16.25%", marginTop: 20 }}></View>
+          <View style={{ width: 250, height: 1, backgroundColor: '#807F7F', marginTop: 20, marginLeft: "16.25%" }}></View>
 
           <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', marginTop: 20, marginLeft: 20, marginRight: 20 }}>
-            <View style={{ backgroundColor: '#414BB2', borderRadius: 10, width: '37%', height: 55, alignItems: 'center', justifyContent: 'center' }}>
+            <TouchableOpacity onPress={() => navigation.navigate('Addcomment')} style={{ backgroundColor: '#414BB2', borderRadius: 10, width: '37%', height: 55, alignItems: 'center', justifyContent: 'center', marginRight: 10 }}>
               <Text style={{ color: 'white', fontSize: 16 }}>Add comment</Text>
-            </View>
-            <View>
+            </TouchableOpacity>
+            <View style={{ marginLeft: 10 }}>
               <Text style={{ color: 'white' }}>Internet<Text style={{ color: 'white', fontStyle: 'italic', fontWeight: 'bold' }}> need </Text>your opinion</Text>
             </View>
           </View>
 
-          <View style={{ width: '65%', height: 1, backgroundColor: '#807F7F', marginLeft: "16.25%", marginTop: 20 }}></View>
+          <View style={{ width: 250, height: 1, backgroundColor: '#807F7F', marginTop: 20, marginLeft: "16.25%" }}></View>
 
           <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 20, marginLeft: 20 }}>
             <Text style={{ color: 'white', fontWeight: 'bold', paddingRight: 50 }}>Comments:</Text>
@@ -180,23 +176,19 @@ export default function Item({ navigation }) {
               </View>
             </View>
           </View>
-
         </View>
-      </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: "#1A1C1E",
-    alignItems: 'center',
+    paddingTop: 10
   },
   header: {
     flexDirection: "row",
     alignItems: "center",
     marginTop: 10,
-    marginLeft: 10,
   }
 });

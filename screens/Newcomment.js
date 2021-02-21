@@ -1,5 +1,6 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity, ScrollView, Image, TextInput, Dimensions } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity, ScrollView, TextInput } from "react-native";
+
 import Logo from "../components/addcomment/Logo";
 import Avatar from "../components/addcomment/Avatar";
 
@@ -50,6 +51,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#1A1C1E",
     alignItems: 'center',
+    paddingTop: 12
   },
   header: {
     flexDirection: "row",

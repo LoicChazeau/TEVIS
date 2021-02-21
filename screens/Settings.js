@@ -1,6 +1,6 @@
 
-import React, { useEffect, useState } from 'react';
-import { StatusBar, Platform, Switch, StyleSheet, Text, View, Button, SafeAreaView, Image, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { StatusBar, Platform, Switch, StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity } from 'react-native';
 import { Divider } from 'react-native-elements';
 import RNPickerSelect from "react-native-picker-select";
 
@@ -8,36 +8,18 @@ export default function Settings({ navigation }) {
 
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-
-
   const [isLoading, setLoading] = useState(true);
-  const [data, setData] = useState([]);
-
-
-  var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-  };
-  useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/Pages/", requestOptions)
-      .then((response) => response.text())
-      .then((result) => setData(JSON.parse(result)["Pages"][0]))
-      // .then((result) =>data=JSON.parse(result)["Pages"][0]) 
-      .catch((error) => console.error(error))
-      .finally(() => setLoading(false));
-    //   {data.map(page => <Text>{page.Id}</Text>)} QUAND TU VEUT LE FAIRE APPARAITRE OUESH 
-  }, []);
 
   return (
     <SafeAreaView style={styles.Container_set}>
-      <View style={styles.circle}>
+      <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.circle}>
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
           <Image
             source={require("./../assets/logotevis.png")}
             style={{ width: 63, height: 63 }}
           />
         </View>
-      </View>
+      </TouchableOpacity>
 
       <View style={styles.header}>
         <TouchableOpacity style={styles.touchable_back} onPress={() => navigation.goBack()}>
@@ -111,7 +93,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#1A1C1E",
     alignItems: "center",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-
+    paddingTop: 15
   },
   circle: {
     width: 82,
@@ -191,6 +173,7 @@ const styles = StyleSheet.create({
     fontSize: 23,
     textDecorationLine: "underline",
     paddingLeft: "5%",
+    marginBottom: 10
   },
 
 })
