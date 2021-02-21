@@ -15,12 +15,13 @@ export default function Whathot({ navigation }) {
     redirect: 'follow'
   };
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/Pages/", requestOptions)
+    fetch("http://127.0.0.1/api/Pages", requestOptions)
       .then((response) => response.text())
-      .then((result) => setData(JSON.parse(result)["Pages"][0]))
+      .then((result) => setData(JSON.parse(result)["Pages"]))
       .catch((error) => console.error(error))
       
   }, []);
+
 
 
   return (
@@ -29,9 +30,9 @@ export default function Whathot({ navigation }) {
 
         <View>
           <View style={styles.header}>
-            <View style={{ marginRight: 15 }}>
-              <Logo />
-            </View>
+          <TouchableOpacity onPress={() => navigation.navigate('Home')} style={{marginRight:15}}>
+							<Logo />
+          </TouchableOpacity>
             <View style={{ justifyContent: 'center' }}>
               <Title />
             </View>
@@ -41,7 +42,7 @@ export default function Whathot({ navigation }) {
           </View>
         </View>
         {data.map(page =>
-            <View style={{ flexDirection: "row", marginTop: 30, justifyContent: "space-around", width: '100%' }}>
+            <TouchableOpacity onPress={() => navigation.navigate('Item', {id:page.Id})} style={{ flexDirection: "row", marginTop: 30, justifyContent: "space-around", width: '100%' }}>
               <View style={{ flex: 1, width: '45%', paddingLeft: 25 }}>
                 <Image
                   source={require("../assets/yeezy.jpeg")}
@@ -57,17 +58,17 @@ export default function Whathot({ navigation }) {
                     source={require("../assets/comment_orange.png")}
                     style={{ resizeMode: "contain", width: 'auto', height: 'auto', minHeight: 80, minWidth: 80}}
                   />
-                  <Text style={{ position: "absolute", color: 'white', fontSize: 30, paddingBottom: 12 }}>1251</Text>
+                  <Text style={{ position: "absolute", color: 'white', fontSize: 30, paddingBottom: 12 }}>{page.Commentaires}</Text>
                 </View>
                 <View style={{ alignItems: "center", justifyContent: "center", flex: 1, flexDirection: 'row' }}>
-                  <Text style={{ color: 'white', fontSize: 28, paddingBottom: 5, paddingRight: 8 }}>3.5/5</Text>
+                  <Text style={{ color: 'white', fontSize: 28, paddingBottom: 5, paddingRight: 8 }}>{page.Moyenne}/5</Text>
                   <Image
                     source={require("../assets/medal.png")}
                     style={{ resizeMode: "contain", width: 'auto', height: 'auto', minHeight: 40, minWidth: 40}}
                   />
                 </View>
               </View>
-            </View>
+            </TouchableOpacity>
         )}
 
         </View>

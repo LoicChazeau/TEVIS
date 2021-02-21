@@ -3,10 +3,32 @@ import { View, TextInput, StyleSheet, TouchableOpacity, Text, Image } from 'reac
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { updateEmail, updatePassword, signup } from '../actions/user'
+import Firebase from '../config/Firebase'
+
+
 
 class Signup extends React.Component {
 	handleSignUp = () => {
 		this.props.signup()
+		setTimeout(function(){
+			let currentUser =  Firebase.auth() 
+	
+			var formdata = new FormData();
+			formdata.append("Id", currentUser.uid);
+			formdata.append("Name", currentUser.email);
+		
+			var requestOptions = {
+			method: 'POST',
+			body: formdata,
+			redirect: 'follow'
+			};
+		
+			fetch("http://127.0.0.1/api/Users", requestOptions)
+			.then(response => response.text())
+			.then(result => console.log(result))
+			.catch(error => console.log('error', error));
+			
+			}, 15000);	console.log ("je passe")
 		this.props.navigation.navigate('Home')
 	}
 

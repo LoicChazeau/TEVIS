@@ -22,6 +22,7 @@ import Likehistory from "./screens/Likehistory.js";
 import Commenthistory from "./screens/Commenthistory.js";
 import Addcomment from "./screens/Addcomment.js";
 import Item from "./screens/Item.js";
+import Newcommentsearch from "./screens/Newcommentsearch.js";
 
 export default function App() {
   return (
@@ -33,14 +34,13 @@ export default function App() {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Profile" component={Profile} />
-
         <Stack.Screen name="Avatar" component={Avatar} />
         <Stack.Screen name="Whathot" component={Whathot} />
         <Stack.Screen name="Likehistory" component={Likehistory} />
         <Stack.Screen name="Commenthistory" component={Commenthistory} />
         <Stack.Screen name="Addcomment" component={Addcomment} />
         <Stack.Screen name="Item" component={Item} />
-
+        <Stack.Screen name="SearchComment" component={Newcommentsearch} />
       </Stack.Navigator>
     </NavigationContainer>
     </Provider>

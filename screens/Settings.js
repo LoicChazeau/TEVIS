@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { StatusBar, Platform, Switch, StyleSheet, Text, View, Button, SafeAreaView, Image, TouchableOpacity } from 'react-native';
 import { Divider } from 'react-native-elements';
 import RNPickerSelect from "react-native-picker-select";
+import Logo from "../components/whathot/Logo";
 
 export default function Settings({ navigation }) {
 
@@ -30,14 +31,11 @@ export default function Settings({ navigation }) {
 
   return (
     <SafeAreaView style={styles.Container_set}>
-      <View style={styles.circle}>
-        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-          <Image
-            source={require("./../assets/logotevis.png")}
-            style={{ width: 63, height: 63 }}
-          />
-        </View>
-      </View>
+
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={{justifyContent: 'center', alignItems: 'center'}}>
+							<Logo />
+          </TouchableOpacity>
+
 
       <View style={styles.header}>
         <TouchableOpacity style={styles.touchable_back} onPress={() => navigation.goBack()}>
@@ -112,14 +110,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
 
-  },
-  circle: {
-    width: 82,
-    height: 82,
-    borderRadius: 41,
-    borderColor: '#2D9BF0',
-    borderStyle: 'solid',
-    borderWidth: 5,
   },
   header: {
     flex: 0.2,

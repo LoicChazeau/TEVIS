@@ -9,6 +9,9 @@ import Searchbar from "../components/home/Searchbar.js";
 import Settings from "../components/home/Settings";
 import Whathot from "../components/home/Whathot.js";
 
+
+
+
 class Home extends React.Component {
 	render() {
 		if (this.props.user.email == null) {
@@ -48,7 +51,7 @@ class Home extends React.Component {
 
 				<View style={{ flex: 0.9 }}></View>
 				<View style={styles.newcomment}>
-					<TouchableOpacity onPress={() => this.props.navigation.navigate('Addcomment')} style={{ flex: 1 }}>
+					<TouchableOpacity onPress={() => this.props.navigation.navigate('SearchComment')} style={{ flex: 1 }}>
 						<Newcomment />
 					</TouchableOpacity>
 				</View>
