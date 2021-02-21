@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   v_comment: {
-    width: '100%',
+    width: 375,
     height: 110,
     backgroundColor: "#F96E4F",
     justifyContent: "center",
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   text2: {
-    color: '#FFFFFF',
+    color: 'white',
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 35,
@@ -101,7 +101,6 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    flex: 1
   },
   center: {
     flex: 0.75,
@@ -114,9 +113,9 @@ const styles = StyleSheet.create({
     resizeMode: 'contain'
   },
   comment: {
-    flex: 2,
     justifyContent: 'center',
-    paddingRight: 15
+    paddingRight: 15,
+    paddingBottom: 10
   },
   row2: {
     flexDirection: "row",

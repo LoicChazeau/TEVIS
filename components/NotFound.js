@@ -10,9 +10,7 @@ export default function NotFound() {
         value={value} />
       <Text style={styles.NotFound}>Oops, it seems like this page doesn't already exist, do you want to create it ?</Text>
       <View style={styles.BtnCreate}>
-        <TouchableOpacity>
           <Text style={styles.text}>Create new page</Text>
-        </TouchableOpacity>
       </View>
       <View style={styles.separator}></View>
       <Text style={styles.suggestion}>Or maybe were you searching for this ?</Text>
@@ -47,7 +45,7 @@ const styles = StyleSheet.create({
   BtnCreate: {
     backgroundColor: "#F96E4F",
     marginTop: 25,
-    width: '100%',
+    width: 375,
     height: 70,
     justifyContent: 'center'
   },
