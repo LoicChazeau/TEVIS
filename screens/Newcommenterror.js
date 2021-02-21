@@ -25,13 +25,13 @@ export default function Newcommenterror({ navigation }) {
         </View>
         <NotFound />
         <View style={styles.row}>
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('Item')} style={styles.BtnImage}>
+          <TouchableOpacity onPress={() => navigation.navigate('Item')} style={styles.BtnImage}>
             <Image
               source={require("../assets/yeezy.jpeg")}
               style={styles.image}
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('Item')} style={styles.BtnContainerInfo}>
+          <TouchableOpacity onPress={() => navigation.navigate('Item')} style={styles.BtnContainerInfo}>
             <ContainerInfo />
           </TouchableOpacity>
         </View>

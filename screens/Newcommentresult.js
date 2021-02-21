@@ -27,13 +27,13 @@ export default function Newcommmentresult({ navigation }) {
           style={styles.input}
           value={value} />
         <View style={styles.row2}>
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('Item')} style={styles.BtnImage}>
+          <TouchableOpacity onPress={() => navigation.navigate('Item')} style={styles.BtnImage}>
             <Image
               source={require("../assets/yeezy.jpeg")}
               style={styles.image2}
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('Item')} style={styles.BtnContainerInfo}>
+          <TouchableOpacity onPress={() => navigation.navigate('Item')} style={styles.BtnContainerInfo}>
             <ContainerInfo />
           </TouchableOpacity>
         </View>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, StyleSheet, TextInput, Text, TouchableOpacity } from 'react-native'
 
-export default function Logo() {
+export default function NotFound() {
   const value = 'https://www.yeesy.com';
   return (
     <View style={styles.center}>
