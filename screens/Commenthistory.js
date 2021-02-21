@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity, ScrollView, Image } from "react-native";
 import RNPickerSelect from "react-native-picker-select";
 
-import Logo from "../components/history/Logo";
+import Logo from "../components/LogoBig.js";
 
 export default function Commenthistory({ navigation }) {
   return (

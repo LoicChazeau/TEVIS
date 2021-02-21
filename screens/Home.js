@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, TouchableOpacity, Text, Image } from "react-native";
 import { connect } from 'react-redux'
 
-import Logo from "../components/home/Logo.js";
+import Logo from "../components/LogoBig.js";
 import Searchbar from "../components/home/Searchbar.js";
 import Whathot from "../components/home/Whathot.js";
 import Newcomment from "../components/home/Newcomment.js";

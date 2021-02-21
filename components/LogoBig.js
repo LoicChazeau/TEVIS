@@ -1,11 +1,11 @@
 import React from 'react'
 import {View, StyleSheet, Image} from 'react-native'
 
-export default function Logo() {
+export default function LogoBig() {
   return(
       <View style={styles.circle}>
         <Image
-          source={require("../../assets/logotevis.png")}
+          source={require("../assets/logotevis.png")}
           style={{ width: 63, height: 63 }}
         />
       </View>

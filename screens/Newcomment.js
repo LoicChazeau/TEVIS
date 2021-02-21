@@ -1,17 +1,14 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity, ScrollView, TextInput } from "react-native";
 
-import Logo from "../components/addcomment/Logo";
-import Avatar from "../components/addcomment/Avatar";
+import Logo from "../components/Logo.js";
+import Avatar from "../components/Avatar.js";
 
 export default function Addcomment({ navigation }) {
-
   const [value, onChangeText] = React.useState('');
-
   return (
     <ScrollView style={{ backgroundColor: "#1A1C1E" }}>
       <View style={styles.container}>
-
         <View>
           <View style={styles.header}>
             <TouchableOpacity onPress={() => navigation.navigate('Home')} style={{ marginRight: 15 }}>
@@ -26,23 +23,19 @@ export default function Addcomment({ navigation }) {
           </View>
         </View>
         <TextInput
-          style={{ borderColor: 'gray', borderWidth: 2, width: "80%", borderRadius: 5, backgroundColor: 'white', color: 'gray', fontSize: 16, padding: 15, marginTop: 30 }}
+          style={styles.input}
           onChangeText={text => onChangeText(text)}
           value={value}
           placeholder='Paste the link or type research here' />
-
         <TouchableOpacity onPress={() => navigation.navigate('Newcommenterror')} style={{ marginTop: 40 }}>
-          <Text style={{ color: 'white', fontSize: 20, fontStyle: 'italic' }}>*Route 1*</Text>
+          <Text style={styles.route}>*Route 1*</Text>
         </TouchableOpacity>
-
         <TouchableOpacity onPress={() => navigation.navigate('Newcommentresult')} style={{ marginTop: 20 }}>
-          <Text style={{ color: 'white', fontSize: 20, fontStyle: 'italic' }}>*Route 2*</Text>
+          <Text style={styles.route}>*Route 2*</Text>
         </TouchableOpacity>
-
-        <Text style={{ color: 'white', fontSize: 24, marginTop: '30%', textAlign: 'center' }}>Type Above and the results will appear here</Text>
+        <Text style={styles.text2}>Type Above and the results will appear here</Text>
       </View>
     </ScrollView>
-
   );
 }
 
@@ -65,4 +58,26 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
   },
+  input: {
+    borderColor: 'gray',
+    borderWidth: 2,
+    width: "80%",
+    borderRadius: 5,
+    backgroundColor: 'white',
+    color: 'gray',
+    fontSize: 16,
+    padding: 15,
+    marginTop: 30
+  },
+  route: {
+    color: 'white',
+    fontSize: 20,
+    fontStyle: 'italic'
+  },
+  text2: {
+    color: 'white',
+    fontSize: 24,
+    marginTop: '30%',
+    textAlign: 'center'
+  }
 });

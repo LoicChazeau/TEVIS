@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity, ScrollView, Image, TextInput, Dimensions } from "react-native";
 import RNPickerSelect from "react-native-picker-select";
 
-import Avatar from "../components/addcomment/Avatar";
+import Avatar from "../components/Avatar";
 
 export default function Item({ navigation }) {
 

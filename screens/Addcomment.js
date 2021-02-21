@@ -1,8 +1,8 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity, ScrollView, Image, TextInput, Dimensions } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity, ScrollView, Image, TextInput } from "react-native";
 
-import Logo from "../components/addcomment/Logo";
-import Avatar from "../components/addcomment/Avatar";
+import Logo from "../components/Logo";
+import Avatar from "../components/Avatar";
 
 export default function Addcomment({ navigation }) {
 
